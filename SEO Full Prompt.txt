@@ -1,0 +1,600 @@
+You are a senior Technical SEO Engineer, SEO Strategist, and Full-Stack Developer.
+
+I want you to implement a complete, production-ready SEO system in this existing project.
+
+IMPORTANT RULES:
+
+1. First inspect the entire project structure and understand the existing architecture.
+2. DO NOT unnecessarily change the existing UI, design, layout, colors, components, functionality, API logic, or business logic.
+3. Preserve all existing features and code wherever possible.
+4. Do not rewrite the project from scratch.
+5. Do not add unnecessary dependencies if the required functionality can be implemented using the existing stack.
+6. Do not hardcode information that should come from configuration, environment variables, CMS data, or dynamic routes.
+7. Do not create fake content, fake reviews, fake ratings, fake backlinks, or misleading structured data.
+8. Follow current Google Search guidelines and SEO best practices.
+9. Make the implementation production-ready, accessible, fast, mobile-friendly, and maintainable.
+10. Before changing files, explain what you found and what you plan to change.
+11. Work phase-by-phase. Do not blindly modify the entire project at once.
+12. After every major phase, verify that existing functionality has not broken.
+13. Keep existing comments and useful code unless there is a real reason to change them.
+14. If something is already correctly implemented, do not unnecessarily replace it.
+15. If you need information such as domain, business name, target country, target city, social links, or keywords, first inspect the project for existing values. Ask me only for information that cannot reasonably be determined from the project.
+
+==================================================
+PHASE 1 — PROJECT & SEO AUDIT
+=============================
+
+First inspect:
+
+* Framework
+* React / Next.js / Vite / HTML / other
+* App Router or Pages Router if Next.js
+* TypeScript / JavaScript
+* Existing metadata
+* Existing title tags
+* Existing meta descriptions
+* Existing canonical URLs
+* robots.txt
+* sitemap.xml
+* Open Graph
+* Twitter/X cards
+* JSON-LD / Schema
+* Heading structure
+* Image alt attributes
+* Image optimization
+* Internal links
+* External links
+* Broken links
+* 404 handling
+* Redirects
+* Duplicate pages
+* URL structure
+* Dynamic routes
+* Pagination
+* Index/noindex configuration
+* Mobile responsiveness
+* Page speed
+* Core Web Vitals
+* JavaScript rendering issues
+* Crawlability
+* Indexability
+* Structured data
+* Accessibility issues that affect SEO
+* Existing analytics
+* Existing Google Search Console setup
+* Existing Google Tag Manager if present
+* Existing Bing Webmaster configuration if present
+* Existing content structure
+* Existing keyword targeting
+* Existing location targeting
+* Existing sitemap generation
+* Existing robots configuration
+
+Then produce an SEO audit with:
+
+CRITICAL:
+
+* Issues that can prevent crawling/indexing or cause major SEO problems.
+
+HIGH:
+
+* Important ranking, CTR, performance, or technical issues.
+
+MEDIUM:
+
+* Improvements that can meaningfully help SEO.
+
+LOW:
+
+* Optional optimizations.
+
+Do not modify anything during this audit phase.
+
+==================================================
+PHASE 2 — SEO CONFIGURATION
+===========================
+
+Create or improve a centralized SEO configuration.
+
+It should support:
+
+* Site name
+* Site description
+* Domain
+* Default title
+* Title template
+* Default keywords only where genuinely useful
+* Default Open Graph image
+* Twitter/X image
+* Favicon
+* Author/company information
+* Social profiles
+* Contact information where appropriate
+* Target country
+* Target language
+* Target city/location where applicable
+
+Do not hardcode values repeatedly across components.
+
+Use environment variables or a central configuration file where appropriate.
+
+==================================================
+PHASE 3 — PAGE-BY-PAGE METADATA
+===============================
+
+Implement unique SEO metadata for every important indexable page.
+
+Each important page should have:
+
+* Unique title
+* Unique meta description
+* Canonical URL
+* Appropriate robots directives
+* Open Graph title
+* Open Graph description
+* Open Graph image
+* Open Graph URL
+* Open Graph type
+* Twitter/X card metadata
+* Appropriate language information where relevant
+
+Titles and descriptions must:
+
+* Clearly describe the page
+* Match the actual content
+* Be written for humans
+* Avoid keyword stuffing
+* Avoid duplicate metadata
+* Encourage useful clicks without being misleading
+
+For dynamic pages, generate metadata dynamically from the actual page data.
+
+==================================================
+PHASE 4 — KEYWORD & SEARCH INTENT STRATEGY
+==========================================
+
+Analyze the project's actual purpose, features, products, services, and content.
+
+Identify:
+
+* Primary keywords
+* Secondary keywords
+* Long-tail keywords
+* Question-based searches
+* Informational intent
+* Commercial intent
+* Transactional intent
+* Navigational intent
+* Local search intent where applicable
+
+Do NOT stuff keywords into pages.
+
+Map keywords to appropriate pages.
+
+Create a keyword-to-page mapping such as:
+
+Page:
+Primary keyword:
+Secondary keywords:
+Search intent:
+Suggested title:
+Suggested description:
+
+Do not create separate pages merely to target tiny keyword variations if they represent the same search intent.
+
+==================================================
+PHASE 5 — CONTENT SEO
+=====================
+
+Analyze existing content.
+
+For each important page:
+
+* Improve clarity
+* Improve topical relevance
+* Improve usefulness
+* Add missing information where genuinely needed
+* Improve heading hierarchy
+* Remove unnecessary repetition
+* Add useful FAQs where appropriate
+* Add examples where useful
+* Add relevant internal links
+* Add trustworthy external references where appropriate
+
+Never generate generic AI filler.
+
+Content should demonstrate:
+
+* First-hand experience where applicable
+* Useful explanations
+* Accurate information
+* Clear authorship where appropriate
+* Trustworthy references
+* Updated information when necessary
+
+If the project is a tool/SaaS/application, create a content strategy around the actual product instead of adding random blog posts.
+
+==================================================
+PHASE 6 — TECHNICAL SEO
+=======================
+
+Implement and verify:
+
+1. robots.txt
+2. sitemap.xml
+3. XML sitemap generation
+4. Canonical URLs
+5. 404 page
+6. Appropriate redirects
+7. Clean URL structure
+8. HTTPS-compatible URLs
+9. Trailing-slash consistency
+10. Duplicate URL prevention
+11. Pagination handling where applicable
+12. Index/noindex rules
+13. Crawlable navigation
+14. Internal linking
+15. Breadcrumbs where appropriate
+16. Proper status codes
+17. Image optimization
+18. Font optimization
+19. Lazy loading where appropriate
+20. Avoid unnecessary client-side rendering for SEO-critical content
+21. Ensure important content is accessible to search engines
+22. Prevent accidental indexing of private/admin/auth pages
+23. Prevent indexing of internal search-result pages where appropriate
+24. Prevent indexing of duplicate/filter URLs where appropriate
+
+Never block important public pages accidentally in robots.txt.
+
+==================================================
+PHASE 7 — STRUCTURED DATA / SCHEMA
+==================================
+
+Analyze the project and implement only relevant Schema.org structured data.
+
+Possible schemas include:
+
+* Organization
+* WebSite
+* WebPage
+* Article
+* BlogPosting
+* BreadcrumbList
+* FAQPage
+* Product
+* SoftwareApplication
+* LocalBusiness
+* Service
+* Person
+
+Only use schema when the page genuinely qualifies.
+
+Do not add fake:
+
+* Reviews
+* Ratings
+* Prices
+* FAQs
+* Events
+* Organizations
+* Author information
+
+Validate JSON-LD syntax and avoid conflicting structured data.
+
+==================================================
+PHASE 8 — IMAGE SEO
+===================
+
+Audit all important images.
+
+Improve:
+
+* File names
+* Alt text
+* Width/height
+* Responsive images
+* Compression
+* Modern formats where supported
+* Lazy loading
+* Priority loading for above-the-fold images
+* Open Graph images
+* Social sharing images
+
+Alt text must describe the image naturally.
+
+Do not keyword-stuff alt attributes.
+
+==================================================
+PHASE 9 — INTERNAL LINKING
+==========================
+
+Build a logical internal linking structure.
+
+Identify:
+
+* Important pages
+* Supporting pages
+* Orphan pages
+* Pages receiving too many/few internal links
+* Relevant anchor text opportunities
+
+Create contextual links between related pages.
+
+Do not spam exact-match anchor text.
+
+If the project contains blog/content pages, create topic clusters where appropriate.
+
+==================================================
+PHASE 10 — PERFORMANCE & CORE WEB VITALS
+========================================
+
+Audit and optimize:
+
+* LCP
+* INP
+* CLS
+* TTFB where relevant
+* JavaScript bundle size
+* Unnecessary dependencies
+* Image size
+* Font loading
+* Third-party scripts
+* Render-blocking resources
+* Client-side JavaScript
+* Hydration issues
+* Caching
+* Compression
+* CDN usage where applicable
+
+For Next.js, use appropriate Next.js features such as:
+
+* next/image
+* next/font
+* server components where appropriate
+* metadata APIs
+* static generation where appropriate
+* dynamic rendering only where required
+
+Do not sacrifice functionality simply to increase a Lighthouse score.
+
+==================================================
+PHASE 11 — MOBILE SEO & ACCESSIBILITY
+=====================================
+
+Verify:
+
+* Responsive layout
+* Mobile navigation
+* Readable text
+* Proper heading hierarchy
+* Accessible buttons
+* Accessible links
+* Form labels
+* Keyboard navigation
+* Focus states
+* Color contrast
+* Touch target sizes
+* No horizontal overflow
+* Mobile performance
+
+Do not redesign the UI unless a real usability/SEO issue requires it.
+
+==================================================
+PHASE 12 — LOCAL SEO
+====================
+
+If this project represents a local business/service, implement appropriate local SEO.
+
+Analyze:
+
+* Business name
+* Location
+* Service areas
+* City
+* Country
+* Contact details
+* Business category
+* LocalBusiness schema
+* Location pages if genuinely useful
+* NAP consistency
+* Google Business Profile readiness
+
+Do NOT create hundreds of fake city pages.
+
+If this is not a local project, skip this phase.
+
+==================================================
+PHASE 13 — SEARCH ENGINE INTEGRATION
+====================================
+
+Prepare the project for:
+
+* Google Search Console
+* Google Analytics
+* Bing Webmaster Tools
+* Google Tag Manager if needed
+
+Do not expose private API keys or credentials.
+
+If verification requires a code/token, create the correct configuration point and tell me exactly where I need to add the value.
+
+==================================================
+PHASE 14 — SEO-FRIENDLY CONTENT PLAN
+====================================
+
+Based on the actual project, create a realistic content plan.
+
+Give me:
+
+* 20 high-quality article/page ideas
+* Primary keyword
+* Search intent
+* Suggested URL
+* Suggested title
+* Brief outline
+* Internal links to include
+
+Prioritize topics based on relevance to the website rather than generating random high-volume keywords.
+
+Avoid keyword cannibalization.
+
+==================================================
+PHASE 15 — OFF-PAGE SEO STRATEGY
+================================
+
+Do not create backlinks automatically.
+
+Instead provide a legitimate backlink and brand-mention strategy.
+
+Possible methods:
+
+* GitHub/project references
+* Developer communities
+* Relevant directories
+* Product launch platforms
+* Technical articles
+* Guest contributions
+* Partnerships
+* Industry resources
+* Digital PR
+* Relevant social profiles
+* Community participation
+
+Do not recommend:
+
+* Buying spam backlinks
+* Link farms
+* PBNs
+* Automated comment spam
+* Fake profiles
+* Fake reviews
+* Link exchanges at scale
+* Manipulative schemes
+
+==================================================
+PHASE 16 — ADS / MONETIZATION READINESS
+=======================================
+
+If the website is intended for advertising monetization:
+
+Check that it has:
+
+* Useful original content
+* Clear navigation
+* About page
+* Contact page
+* Privacy Policy
+* Terms where appropriate
+* Cookie/consent handling where legally required
+* Disclaimer where appropriate
+* No prohibited content
+* No deceptive navigation
+* No fake traffic
+* No forced ad clicks
+* Good mobile UX
+
+Prepare the site for legitimate ad networks such as Google AdSense or other suitable publishers.
+
+Do not insert excessive ads that damage user experience.
+
+Keep advertising separate from important navigation and interactive controls.
+
+==================================================
+PHASE 17 — ANALYTICS & SEO MONITORING
+=====================================
+
+Create a monitoring checklist for:
+
+Google Search Console:
+
+* Clicks
+* Impressions
+* CTR
+* Average position
+* Queries
+* Indexed pages
+* Coverage/indexing issues
+* Core Web Vitals
+* Manual actions
+* Security issues
+
+Analytics:
+
+* Organic users
+* Landing pages
+* Engagement
+* Conversions
+* Traffic sources
+* Countries
+* Devices
+* Revenue where configured
+
+Explain what I should check weekly and monthly.
+
+==================================================
+PHASE 18 — FINAL VALIDATION
+===========================
+
+Before finishing, test the implementation.
+
+Verify:
+
+* Build succeeds
+* No TypeScript errors
+* No ESLint errors caused by your changes
+* Existing functionality works
+* Existing API calls work
+* Existing forms work
+* Authentication still works
+* Important pages load
+* Metadata exists
+* Canonical URLs are correct
+* robots.txt works
+* sitemap.xml works
+* JSON-LD is valid
+* Images have appropriate alt text
+* Internal links work
+* No important page is accidentally noindexed
+* No important page is blocked by robots.txt
+* Admin/private pages are not unnecessarily indexable
+* Mobile layout still works
+* No obvious performance regressions
+
+If possible, run the project's existing tests and build commands.
+
+==================================================
+FINAL REPORT
+============
+
+After implementation, give me a concise report with:
+
+1. SEO issues found
+2. SEO issues fixed
+3. Files changed
+4. Metadata implemented
+5. Sitemap status
+6. Robots.txt status
+7. Schema implemented
+8. Performance improvements
+9. Content improvements
+10. Internal linking improvements
+11. Remaining issues
+12. Things I must configure manually
+13. Google Search Console steps
+14. Google Analytics steps
+15. Bing Webmaster steps
+16. Recommended next SEO actions
+17. 20 content ideas
+18. Monetization readiness
+19. Any risks or limitations
+
+MOST IMPORTANT:
+
+Do not stop at giving me advice.
+
+Actually inspect the project and IMPLEMENT the SEO changes in the existing codebase.
+
+Start with PHASE 1 only.
+
+After completing the audit, show me the findings and proposed changes. Then continue phase-by-phase after confirmation.
